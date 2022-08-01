@@ -1,18 +1,14 @@
-<<<<<<< HEAD
 import random
-=======
->>>>>>> b28fc7cfec149e4204727cf1f32a9f8ae9b77e26
 from django.db import models
 from django.conf import settings
 from django.db.models import Q
 User=settings.AUTH_USER_MODEL 
 
 # Create your models here.
-<<<<<<< HEAD
+
 
 TAGE_MODEL_VALUES=['electronice','cars','boats','movies','cameras']
-=======
->>>>>>> b28fc7cfec149e4204727cf1f32a9f8ae9b77e26
+
 class ProductQuerySet(models.QuerySet):
     def is_public(self):
         return self.filter(public=True)
@@ -40,25 +36,23 @@ class   Products(models.Model):
     public=models.BooleanField(default=True)
 
     objects= ProductManager()
-<<<<<<< HEAD
+
     def is_public(self)->bool:
         return self.public # true or false
     
     def get_tags_list(self):
         return[random.choice(TAGE_MODEL_VALUES)]
-=======
->>>>>>> b28fc7cfec149e4204727cf1f32a9f8ae9b77e26
+
     @property
     def sale_price(self):
         return "%.2f" %(float(self.Price)*0.8)
     
     def get_discount(self):
         return "122"
-<<<<<<< HEAD
+
     
     def __str__(self):
         return f"{self.title}"
     
-=======
->>>>>>> b28fc7cfec149e4204727cf1f32a9f8ae9b77e26
+
 

@@ -13,15 +13,15 @@ from api.mixins import StaffEditorPermissionMixin,UserQuerySetMixin
 #     """
 #     List a queryset.
 #     """
-<<<<<<< HEAD
+
 #     def list(self, request, *args, **kwargs):
 #         queryset = self.filter_queryset(self.get_queryset())
-=======
+
 #     print('shoaib')
 #     def list(self, request, *args, **kwargs):
 #         queryset = self.filter_queryset(self.get_queryset())
 
->>>>>>> b28fc7cfec149e4204727cf1f32a9f8ae9b77e26
+
 #         page = self.paginate_queryset(queryset)
 #         if page is not None:
 #             print('shoaib')

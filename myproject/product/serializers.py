@@ -13,11 +13,8 @@ class ProductInSelializer(serializers.Serializer):
     title=serializers.CharField(read_only=True)
 
 class ProductSerializers(serializers.ModelSerializer):
-<<<<<<< HEAD
-    # owner=UserPublicScrializer(source='user')
-=======
+
     owner=UserPublicScrializer(source='user')
->>>>>>> b28fc7cfec149e4204727cf1f32a9f8ae9b77e26
     # related_product=ProductInSelializer(source='user.products_set.all',read_only=True,many=True)
     # my_user_data=serializers.SerializerMethodField(read_only=True)
     # my_discount=serializers.SerializerMethodField(read_only=True)
@@ -30,11 +27,10 @@ class ProductSerializers(serializers.ModelSerializer):
         model=Products
         fields=[
             'pk',
-<<<<<<< HEAD
+
             # 'owner',
-=======
+
             'owner',
->>>>>>> b28fc7cfec149e4204727cf1f32a9f8ae9b77e26
             'url',
             'edit_url',
             'title',

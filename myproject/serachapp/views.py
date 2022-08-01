@@ -1,10 +1,12 @@
-<<<<<<< HEAD
 from unittest import result
 from rest_framework import generics
 from rest_framework.response import Response
 from product.models import Products
 from product.serializers import ProductSerializers
+from rest_framework import generics
 
+from product.models import Products
+from product.serializers import ProductSerializers
 from . import client
 class SearchListView(generics.GenericAPIView):
     def get(self,request,*args,**kwargs):
@@ -20,14 +22,6 @@ class SearchListView(generics.GenericAPIView):
         results=client.perform_search(query,tags=tag ,user=user,public=public)
         return Response(results)
 class SearchListOldView(generics.ListAPIView):
-=======
-from rest_framework import generics
-
-from product.models import Products
-from product.serializers import ProductSerializers
-
-class SearchListView(generics.ListAPIView):
->>>>>>> b28fc7cfec149e4204727cf1f32a9f8ae9b77e26
     queryset = Products.objects.all()
     serializer_class = ProductSerializers
 
