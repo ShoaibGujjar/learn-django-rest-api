@@ -37,10 +37,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #thrd pary api services
+    'algoliasearch_django',
+    # third party packige
     'rest_framework',
     'rest_framework.authtoken',
+
+    #internal app
     'api',
     'product',
+    'serachapp',
 ]
 
 MIDDLEWARE = [
@@ -146,4 +152,10 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
+}
+
+ALGOLIA = {
+    'APPLICATION_ID': 'U7CIFE2710',
+    'API_KEY': '9eb4d1bf265e988d69bd5d98db86beb6',
+    'INDEX_PREFIX':'project'
 }
